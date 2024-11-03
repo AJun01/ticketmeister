@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="<%= locale %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= __('cart') %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1><%= __('your_cart') %></h1>
+
+    <% if (cart.length > 0) { %>
+      <form action="/cart/update" method="post">
+        <% cart.forEach((item) => { %>
+          <div class="cart-item">
+            <h3><%= item.venue.title %></h3>
+            <label>
+              <%= __('quantity') %>:
+              <input 
+                type="number" 
+                name="quantities" 
+                value="<%= item.quantity %>" 
+                min="1"
+              />
+            </label>
+            <button formaction="/cart/remove/<%= item.venue.id %>" formmethod="post">
+              <%= __('remove_ticket') %>
+            </button>
+          </div>
+        <% }); %>
+        <br>
+        <button type="submit"><%= __('update_cart') %></button>
+      </form>
+
+      <div class="cart-actions">
+        <button onclick="window.location.href='/venues'"><%= __('go_back') %></button>
+        <button onclick="window.location.href='/users/account'"><%= __('user_account') %></button>
+      </div>
+    <% } else { %>
+      <p><%= __('cart_empty') %></p>
+      <button onclick="window.location.href='/venues'"><%= __('go_back') %></button>
+    <% } %>
+  </div>
+</body>
+</html>

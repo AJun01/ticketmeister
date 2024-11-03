@@ -1,0 +1,82 @@
+[
+    {
+      "id": 2,
+      "title": "Jazz Night",
+      "slogan": "Smooth Tunes Await",
+      "showcase_image": "/images/venue2/main.jpg",
+      "focused_images": [
+        "/images/venue2/1.jpg",
+        "/images/venue2/2.jpg",
+        "/images/venue2/3.jpg",
+        "/images/venue2/4.jpg",
+        "/images/venue2/5.jpg",
+        "/images/venue2/6.jpg"
+      ],
+      "date": "2024-07-20T20:00",
+      "location": "New Orleans, USA"
+    },
+    {
+      "id": 3,
+      "title": "Classical Evening",
+      "slogan": "An Orchestral Journey",
+      "showcase_image": "/images/venue3/main.jpg",
+      "focused_images": [
+        "/images/venue3/1.jpg",
+        "/images/venue3/2.jpg",
+        "/images/venue3/3.jpg",
+        "/images/venue3/4.jpg",
+        "/images/venue3/5.jpg",
+        "/images/venue3/6.jpg"
+      ],
+      "date": "2024-08-05T18:30",
+      "location": "Vienna, Austria"
+    },
+    {
+      "id": 4,
+      "title": "Pop Extravaganza",
+      "slogan": "Experience the Hits Live",
+      "showcase_image": "/images/venue4/main.jpg",
+      "focused_images": [
+        "/images/venue4/1.jpg",
+        "/images/venue4/2.jpg",
+        "/images/venue4/3.jpg",
+        "/images/venue4/4.jpg",
+        "/images/venue4/5.jpg",
+        "/images/venue4/6.jpg"
+      ],
+      "date": "2024-09-10T21:00",
+      "location": "Tokyo, Japan"
+    },
+    {
+      "id": 5,
+      "title": "Electronic Dance Fest",
+      "slogan": "Dance the Night Away",
+      "showcase_image": "/images/venue5/main.jpg",
+      "focused_images": [
+        "/images/venue5/1.jpg",
+        "/images/venue5/2.jpg",
+        "/images/venue5/3.jpg",
+        "/images/venue5/4.jpg",
+        "/images/venue5/5.jpg",
+        "/images/venue5/6.jpg"
+      ],
+      "date": "2024-10-25T22:00",
+      "location": "Berlin, Germany"
+    },
+    {
+      "id": 6,
+      "title": "Country Music Gala",
+      "slogan": "Feel the Heartbeat of Country",
+      "showcase_image": "/images/venue6/main.jpg",
+      "focused_images": [
+        "/images/venue6/1.jpg",
+        "/images/venue6/2.jpg",
+        "/images/venue6/3.jpg",
+        "/images/venue6/4.jpg",
+        "/images/venue6/5.jpg",
+        "/images/venue6/6.jpg"
+      ],
+      "date": "2024-11-15T19:30",
+      "location": "Nashville, USA"
+    }
+  ]

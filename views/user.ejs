@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="<%= user.language || 'en' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= __('user_account') %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1><%= __('welcome') %>, <%= user.username %>!</h1>
+
+    <div>
+      <table>
+      <td style=" width: 50%;">
+          <% if (user.profilePicture) { %>
+            <img src="<%= user.profilePicture %>" alt="<%= user.username %>" class="profile-picture">
+          <% } else { %>
+            <img src="/images/default-profile.jpg" alt="Default Profile" class="profile-picture">
+          <% } %>
+      </td>
+      <td>
+            <h2><%= __('add_picture') %></h2>
+            <form action="/users/add-picture" method="post" enctype="multipart/form-data">
+              <input type="file" name="profilePicture" accept="image/*" required>
+              <button type="submit"><%= __('upload') %></button>
+            </form>
+      </td>
+    </table>
+    </div>
+    
+    <h2><%= __('change_password') %></h2>
+    <form action="/users/change-password" method="post">
+      <div>
+        <label for="currentPassword"><%= __('current_password') %>:</label>
+        <input type="password" name="currentPassword" id="currentPassword" required>
+      </div>
+      <div>
+        <label for="newPassword"><%= __('new_password') %>:</label>
+        <input type="password" name="newPassword" id="newPassword" required>
+      </div>
+      <button type="submit"><%= __('change_password') %></button>
+    </form>
+
+    <h2><%= __('select_language') %></h2>
+    <form action="/users/select-language" method="post">
+      <select name="language" required>
+        <option value="en" <%= user.language === 'en' ? 'selected' : '' %>><%= __('english') %></option>
+        <option value="it" <%= user.language === 'it' ? 'selected' : '' %>><%= __('italian') %></option>
+        <option value="fr" <%= user.language === 'fr' ? 'selected' : '' %>><%= __('french') %></option>
+        <option value="es" <%= user.language === 'es' ? 'selected' : '' %>><%= __('spanish') %></option>
+      </select>
+      <button type="submit"><%= __('update') %></button>
+    </form>
+
+    <p><a href="/logout"><%= __('logout') %></a></p>
+  </div>
+</body>
+</html>
